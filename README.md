@@ -48,7 +48,7 @@ This project was "refurbished" from a 2-year-old legacy codebase. The goal was t
 
 1. **Clone the repository**
    ```bash
-   git clone [https://github.com/rohilshah2006/kaizen.git](https://github.com/rohilshah2006/kaizen.git)
+   git clone https://github.com/rohilshah2006/kaizen
    cd kaizen
    ```
 
