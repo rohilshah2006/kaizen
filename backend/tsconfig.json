@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "es2020",                       /* Modern JS features */
+    "module": "commonjs",                     /* Output standard Node.js code */
+    "moduleResolution": "node",               /* Find modules like Node does */
+    "outDir": "./dist",                       /* Where compiled files go */
+    "rootDir": "./",                          /* Where source files are */
+    
+    /* Strictness */
+    "strict": true,                           /* Enable strict type-checking */
+    "esModuleInterop": true,                  /* Allow "import x from 'y'" for CommonJS modules */
+    "skipLibCheck": true,                     /* Skip checking types in node_modules (saves headaches) */
+    "forceConsistentCasingInFileNames": true, /* Ensure file casing is correct */
+    
+    /* The Fix for your error */
+    "verbatimModuleSyntax": false             /* Turn off the strict syntax check */
+  },
+  "include": ["./**/*.ts"],
+  "exclude": ["node_modules"]
+}
