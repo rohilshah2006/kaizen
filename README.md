@@ -21,16 +21,17 @@ This project was "refurbished" from a 2-year-old legacy codebase. The goal was t
 ## 🛠 Tech Stack
 
 ### Frontend
-- **Framework:** React 18+ (Vite)
-- **Styling:** Tailwind CSS (Dark Mode default)
-- **State/Fetching:** TanStack Query (Auto-caching & Optimistic Updates)
-- **Language:** TypeScript
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
+![TanStack Query](https://img.shields.io/badge/TanStack_Query-FF4154?style=flat-square&logo=react-query&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
 
 ### Backend
-- **Runtime:** Node.js
-- **Framework:** Express.js
-- **Database:** MongoDB (Mongoose ODM)
-- **Language:** TypeScript
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
 
 ## ✨ Features
 - **Kanban Visualization:** Organize tasks by status (To Do, In Progress, Completed).
