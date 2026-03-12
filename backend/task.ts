@@ -3,8 +3,11 @@ import mongoose, { Document, Schema } from 'mongoose';
 // 1. Create an interface representing a document in MongoDB.
 export interface ITask extends Document {
   title: string;
-  description?: string; // The '?' means it's optional
-  status: 'To Do' | 'In Progress' | 'Completed'; // Strict union type
+  description?: string;
+  status: 'To Do' | 'In Progress' | 'Completed';
+  priority: 'Low' | 'Medium' | 'High';
+  tags: string[];
+  dueDate?: Date;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -19,14 +22,27 @@ const taskSchema: Schema = new Schema({
   description: {
     type: String,
     trim: true,
+    default: '',
   },
   status: {
     type: String,
     enum: ['To Do', 'In Progress', 'Completed'],
     default: 'To Do',
   },
+  priority: {
+    type: String,
+    enum: ['Low', 'Medium', 'High'],
+    default: 'Medium',
+  },
+  tags: {
+    type: [String],
+    default: [],
+  },
+  dueDate: {
+    type: Date,
+  },
 }, {
-  timestamps: true // Automagically manages createdAt and updatedAt
+  timestamps: true
 });
 
 // 3. Export the Model

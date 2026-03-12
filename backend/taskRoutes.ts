@@ -17,7 +17,7 @@ router.get('/tasks', async (req: Request, res: Response) => {
 // @desc Create a new task
 // @route POST /api/tasks
 router.post('/tasks', async (req: Request, res: Response) => {
-  const { title, description } = req.body;
+  const { title } = req.body;
 
   if (!title) {
      res.status(400).json({ message: 'Title is required' });
@@ -25,7 +25,7 @@ router.post('/tasks', async (req: Request, res: Response) => {
   }
 
   try {
-    const newTask = new Task({ title, description });
+    const newTask = new Task(req.body);
     const savedTask = await newTask.save();
     res.status(201).json(savedTask);
   } catch (error) {
@@ -33,16 +33,14 @@ router.post('/tasks', async (req: Request, res: Response) => {
   }
 });
 
-// @desc Update a task status
+// @desc Update a task
 // @route PUT /api/tasks/:id
 router.put('/tasks/:id', async (req: Request, res: Response) => {
-  const { status } = req.body;
-
   try {
     const updatedTask = await Task.findByIdAndUpdate(
       req.params.id,
-      { status },
-      { new: true } // Return the updated document
+      req.body,
+      { new: true, runValidators: true }
     );
 
     if (!updatedTask) {

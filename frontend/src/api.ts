@@ -10,12 +10,17 @@ export const fetchTasks = async (): Promise<Task[]> => {
   return data;
 };
 
-export const createTask = async (task: { title: string; description: string }) => {
+export const createTask = async (task: Partial<Task>): Promise<Task> => {
   const { data } = await API.post('/tasks', task);
   return data;
 };
 
-export const updateTaskStatus = async ({ id, status }: { id: string; status: string }) => {
+export const updateTask = async (task: Partial<Task> & { _id: string }): Promise<Task> => {
+  const { data } = await API.put(`/tasks/${task._id}`, task);
+  return data;
+};
+
+export const updateTaskStatus = async ({ id, status }: { id: string; status: Task['status'] }) => {
   const { data } = await API.put(`/tasks/${id}`, { status });
   return data;
 };

@@ -84,9 +84,28 @@ kaizen/
 ```
 
 ## 🔮 Roadmap
-- [ ] Drag and Drop functionality (dnd-kit)
-- [ ] Edit Task details (Modals)
+- [x] Drag and Drop functionality (dnd-kit)
+- [x] Edit Task details (Modals)
 - [ ] User Authentication (JWT)
+
+## 📜 Changelog
+
+### Mar 12, 2026 - Interactive Excellence
+- **Complete UI/UX Overhaul**: Transitioned to a premium glassmorphic dark theme.
+- **Drag & Drop**: Implemented fluid task movement across columns using `@dnd-kit`.
+- **Advanced Filtering**: Added real-time search and priority-based filtering.
+- **Task Management**: Introduced due dates with automated "Overdue" status tracking.
+- **Enhanced Creation**: Unified creation and editing into a comprehensive task modal.
+- **System Stability**: Repaired MongoDB service integration and added frontend connectivity error handling.
+
+### Feb 23, 2026 - Modern Refresh
+- Initial migration to React + Vite + Tailwind CSS.
+- Basic Kanban board functionality with CRUD operations.
+- Backend transition to Node.js/Express with Mongoose.
+
+### 2024 - Legacy Version
+- Original proof-of-concept release.
+- Static task management and legacy styling.
 
 ## 📄 License
 This project is open source and available under the [MIT License](LICENSE).
